@@ -12,4 +12,19 @@
         }).join("");
     });
 
+    document.getElementById("copy").addEventListener("click", () => copyToClipboard());
+
+    function copyToClipboard() {
+        const target = document.getElementById("output");
+        target.focus();
+        target.setSelectionRange(0, target.value.length);
+
+        try {
+            document.execCommand("copy");
+        } catch (e) {
+            alert("Sorry, copy failed... Please try usual way.")
+        }
+        document.getElementById("input").focus();
+    }
+
 })()

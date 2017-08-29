@@ -10,16 +10,20 @@
         #input,
         #output {
             width: 300px;
-            height: 300px;
+            height: 200px;
+        }
+        .center {
+            text-align: center
         }
     </style>
 </head>
 
 <body>
-    使い方：左側にひらがな・カタカナ・英語・記号を入力し，右側に出てきた文字をコピーしてLINEに貼り付けるだけ（PC版LINE以外は動作するか知らないです）
-    <div>
+    使い方：Inputに対応している文字を入力し，Copy to clipboardボタンを押してLINEに貼り付けるだけ
+    <div class="center">
         <textarea id="input" placeholder="Input"></textarea>
         <textarea id="output" placeholder="Output" readonly></textarea>
+        <div><button id="copy">Copy to clipboard</button></div>
     </div>
     <script src="app.js"></script>
 </body>
